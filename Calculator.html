@@ -1,0 +1,148 @@
+<html>
+      <meta charset="utf-8"/>
+      <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Calculator</title>
+      </head>
+      <body>
+      <div class = title >Audible Calculator</div>
+      <table border="1" >
+         <tr>
+            <td colspan="3"><input type="text" name="txt"id="result"/></td>
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="c" onclick="clr();play_clear();"/> </td>
+         </tr>
+         <tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1');play_1();"/> </td>
+            <td><input type="button" value="2" onclick="dis('2');play_2();"/> </td>
+            <td><input type="button" value="3" onclick="dis('3');play_3();"/> </td>
+            <td><input type="button" value="/" onclick="dis('/');play_div();"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="4" onclick="dis('4');play_4();"/> </td>
+            <td><input type="button" value="5" onclick="dis('5');play_5();"/> </td>
+            <td><input type="button" value="6" onclick="dis('6');play_6();"/> </td>
+            <td><input type="button" value="-" onclick="dis('-');play_sub();"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="7" onclick="dis('7');play_7();"/> </td>
+            <td><input type="button" value="8" onclick="dis('8');play_8();"/> </td>
+            <td><input type="button" value="9" onclick="dis('9');play_9();"/> </td>
+            <td><input type="button" value="+" onclick="dis('+');play_plus();"/> </td>
+         </tr>
+         <tr>
+            <td><input type="button" value="." onclick="dis('.');play_dec();"/> </td>
+            <td><input type="button" value="0" onclick="dis('0');play_0();"/> </td>
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve();play_equal();"/> </td>
+            <td><input type="button" value="*" onclick="dis('*');play_muli();"/> </td>
+         </tr>
+      </table>
+          <audio id="0" src="0.mp3"></audio>
+          <audio id="1" src="1.mp3"></audio>
+          <audio id="2" src="2.mp3"></audio>
+          <audio id="3" src="3.mp3"></audio>
+          <audio id="4" src="4.mp3"></audio>
+          <audio id="5" src="5.mp3"></audio>
+          <audio id="6" src="6.mp3"></audio>
+          <audio id="7" src="7.mp3"></audio>
+          <audio id="8" src="8.mp3"></audio>
+          <audio id="9" src="9.mp3"></audio>
+          <audio id="plus" src="add.mp3"></audio>
+          <audio id="sub" src="sub.mp3"></audio>
+          <audio id="muli" src="muli.mp3"></audio>
+          <audio id="div" src="div.mp3"></audio>
+          <audio id="equal" src="equal.mp3"></audio>
+          <audio id="clear" src="clear.mp3"></audio>
+          <audio id="dec" src="dec.mp3"></audio>
+   </body>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="page.js"></script>
+          <script>
+              function dis(val)
+              {
+                document.getElementById("result").value+=val
+              }
+              function solve()
+              {
+                let x = document.getElementById("result").value
+                let y = eval(x)
+                document.getElementById("result").value = y
+              }
+              function clr()
+              {
+                document.getElementById("result").value = ""
+              }
+              function play_0() {
+                var audio = document.getElementById("0");
+                audio.play();
+              }
+              function play_1() {
+                var audio = document.getElementById("1");
+                audio.play();
+              }
+              function play_2() {
+                var audio = document.getElementById("2");
+                audio.play();
+              }
+              function play_3() {
+                var audio = document.getElementById("3");
+                audio.play();
+              }
+              function play_4() {
+                var audio = document.getElementById("4");
+                audio.play();
+              }
+              function play_5() {
+                var audio = document.getElementById("5");
+                audio.play();
+              }
+              function play_6() {
+                var audio = document.getElementById("6");
+                audio.play();
+              }
+              function play_7() {
+                var audio = document.getElementById("7");
+                audio.play();
+              }
+              function play_8() {
+                var audio = document.getElementById("8");
+                audio.play();
+              }
+              function play_9() {
+                var audio = document.getElementById("9");
+                audio.play();
+              }
+              function play_clear() {
+                var audio = document.getElementById("clear");
+                audio.play();
+              }
+              function play_div() {
+                var audio = document.getElementById("div");
+                audio.play();
+              }
+              function play_plus() {
+                var audio = document.getElementById("plus");
+                audio.play();
+              }
+              function play_muli() {
+                var audio = document.getElementById("muli");
+                audio.play();
+              }
+              function play_sub() {
+                var audio = document.getElementById("sub");
+                audio.play();
+              }
+              function play_equal() {
+                var audio = document.getElementById("equal");
+                audio.play();
+              }
+              function play_dec() {
+                var audio = document.getElementById("dec");
+                audio.play();
+              }
+          </script>
+</html>
